@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG</title>
+
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+    
+    #primary_nav_wrap {
+        margin-top: 28px;
+        position: absolute;
+        left: 0;
+        padding-left: 1px;
+        z-index: 999;
+    }
+    
+    .general-menu {
+        width: 229px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background: #ffffff;
+    }
+    
+    #cssmenu ul .castom-m {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+    }
+    
+    .general-menu__sub-nav {
+        display: block !important;
+        background: #f3f3f3;
+        padding: 22px 22px 22px 50px;
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-column-gap: 28px;
+        -moz-column-gap: 28px;
+        column-gap: 28px;
+        -webkit-perspective: 1;
+    }
+    
+    .general-menu__category-block {
+        width: 222px;
+        margin-bottom: 24px;
+        -moz-column-break-inside: avoid;
+        break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+    }
+    
+    .general-menu__cat-name {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition-duration: 0 !important;
+        transition-duration: 0 !important;
+        font-size: 15px;
+        color: #00aff2;
+        padding-right: 10px;
+    }
+    
+    .general-menu__def-link {
+        margin-bottom: 12px;
+        -webkit-transition-duration: 0;
+        transition-duration: 0;
+    }
+    
+    .general-menu__category-block ul {
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    #cssmenu ul ul li {
+        -webkit-transition: height .2s ease;
+        -moz-transition: height .2s ease;
+        -ms-transition: height .2s ease;
+        -o-transition: height .2s ease;
+        transition: height .2s ease;
+    }
+    
+    .open {
+        display: block;
+    }
+    
+    .general-menu__category-block ul li {
+        font-size: 13px;
+    }
+    
+    .general-menu__def-link {
+        margin-bottom: 12px;
+        -webkit-transition-duration: 0;
+        transition-duration: 0;
+    }
+    
+    #cssmenu .m>ul,
+    #cssmenu ul li a {
+        position: relative;
+    }
+    
+    .general-menu__sub-nav {
+        display: block !important;
+        background: #f3f3f3;
+        padding: 22px 22px 22px 50px;
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-column-gap: 28px;
+        -moz-column-gap: 28px;
+        column-gap: 28px;
+        -webkit-perspective: 1;
+    }
+    
+    .catalog {
+        font-family: monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        margin-left: 12px;
+        height: 18px;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .cataloge {
+        font-family: monospace;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        margin-left: 12px;
+        height: 18px;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .naviagte {
+        width: 100%;
+        background: #fd9710;
+        height: 66px;
+        border: 1px solid #fd9710;
+    }
+    
+    .closed {
+        display: none;
+    }
+    
+    .divamen {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .general-menu__brands {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: auto;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .titlecategory {
+        display: flex;
+    }
+    
+    .titlecategory svg {
+        width: 15%;
+    }
+    
+    .general-menu__sub-nav {
+        display: none;
+    }
+    
+    li .titlecategory:hover .general-menu__sub-nav {
+        display: block;
+    }
+    
+    ul {
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .test-divas {
+        background: #f3f3f3;
+        margin-left: 15%;
+        position: fixed;
+        width: 83%;
+        top: 68px;
+        display: none;
+        column-count: 4;
+        padding-bottom: 50px;
+    }
+    
+    .itemmenu {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .itemmenu:hover {
+        background: #f3f3f3;
+    }
+    
+    .general-menu__ico-arrow {
+        position: relative;
+        right: 20px;
+        background: url(https://prote.ua/catalog/view/theme/default/image/icons/right-arrow.svg);
+        width: 6px;
+        color: #00aff2;
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+    }
+    
+    .test-divas ul {
+        padding-top: 5px;
+    }
+    
+    .test-divas .dd {
+        padding-top: 15px;
+    }
+    
+    .openedman {
+        background: url(https://prote.ua/image/menus.svg);
+        background-repeat: no-repeat;
+    }
+    
+    .menusclosed {
+        background: url(https://prote.ua/image/menusclosed.svg);
+        ;
+        background-repeat: no-repeat;
+    }
+    
+    .out {
+        display: none;
+    }
+    
+    .general-menu__def-link a:hover {
+        color: #fd9710;
+        -webkit-transition-duration: 0;
+        transition-duration: 0;
+    }
+    
+    .general-menu__def-link a {
+        color: black;
+    }
+</style>
+
+<body>
+
+
+    <script>
+        function ttt() {
+            var actives = document.getElementsByClassName('aim general-menu');
+            var currentActive = actives[0];
+            if (currentActive)
+                actives[0].className = (actives[0].className == 'aim general-menu closed' ? 'aim general-menu active' : 'aim general-menu closed')
+
+            var activese = document.getElementsByClassName('menuses');
+            var currentActivee = activese[0];
+            if (currentActivee)
+                activese[0].className = (activese[0].className == 'menuses openedman' ? 'menuses menusclosed' : 'menuses openedman')
+
+            var activese = document.getElementsByClassName('catalog');
+            var currentActivee = activese[0];
+            if (currentActivee)
+                activese[0].className = (activese[0].className == 'catalog in' ? 'catalog out' : 'catalog in')
+
+            var activese = document.getElementsByClassName('cataloge');
+            var currentActivee = activese[0];
+            if (currentActivee)
+                activese[0].className = (activese[0].className == 'cataloge in' ? 'cataloge out' : 'cataloge in')
+
+        };
+    </script>
+
+
+
+    <div class="naviagte">
+        <nav>
+            <ul>
+                <li style="border:1px solid #fd9710; background:#fd9710; height: 49px">
+
+
+
+                    <a onclick="ttt(); return false" href="#">
+
+
+
+                        <span class="menuses openedman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                        <span class="cataloge out">Закрыть</span> <span class="catalog in">Каталог</span></a>
+                    <ul id="primary_nav_wrap" class="aim general-menu closed">
+                        <li class="itemmenu">
+                            <a class="titlecategory" href="#">
+                                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/paper_h.svg">
+                                <span style="padding-left:5%; width: 85%;">Папір та паперова продукція</span>
+                                <span class="general-menu__ico-arrow"></span>
+                            </a>
+                            <ul class="test-divas">
+                                <ul class="dd">
+                                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/paper-materials/office-paper/">Папір офісний</a>
+                                    </li>
+
+
+                                    <ul>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/office-paper/">Папір офісний</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/tsvetnaya_bumaga/">Папір кольоровий</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/ofsetnaya-bumaga/">Папір офсетний</a></li>
+                                    </ul>
+
+
+
+                                </ul>
+                                <ul class="dd">
+                                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/paper-materials/">Стрічки, цінники, етикетки</a>
+                                    </li>
+                                    <ul>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/cass-tape/">Стрічка касова</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/cass-tape/f2544-80-mm/">Стрічка для систем електронної черги</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/labels/"> Самоклеючі етикетки</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/tsenniki/">Цінники</a></li>
+                                    </ul>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/bloknoti/f1120-ezhednevnik/">Щоденники</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/bloknoti/f1120-bloknot/">Блокноти</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kalendar/f2274-planing/">Планінги, тижневики</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/bloknoti/f1120-kantcelyarskaya-kniga/">Книги канцелярські</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kalendar/f2274-nastolnij/f2274-nastennij/">Календарі</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-millimetrovaya-bumaga/">Папір масштабно-координатний (міліметрівка)</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-kopirovalnaya-bumaga/">Папір копіювальний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/vatmany/">Папір для креслення (ватман)</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-kalka/">Папір калька</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-magnitnaya/">Папір магнітний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-thermotrans/">Папір термотрансферний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f87-sublimatcionnaya/">Папір сублімаційний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/office-paper/f84-rulon/">Факс-папір</a></li>
+                                </ul>
+                                <ul class="dd">
+                                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Папір спеціальний</a>
+                                    </li>
+                                    <ul>
+                                        <li class="general-menu__def-link"><a href="/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-millimetrovaya-bumaga/">Папір масштабно-координатний (міліметрівка)</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-kopirovalnaya-bumaga/">Папір копіювальний</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/vatmany/">Папір для креслення (ватман)</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-kalka/">Папір калька</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-magnitnaya/">Папір магнітний</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-thermotrans/">Папір термотрансферний</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f87-sublimatcionnaya/">Папір сублімаційний</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/office-paper/f84-rulon/">Факс-папір</a></li>
+                                    </ul>
+                                </ul>
+
+                                <ul class="dd">
+                                    <li><a class="general-menu__cat-name general-menu__def-link" href="prote.ua/ua/paper-materials/">Паперові вироби</a>
+                                    </li>
+                                    <ul>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/memo-blocks/">Блоки паперу для нотаток</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/bloki-bumagi-s-klejkim-sloem-zakladki/f1120-stiker-dlya-zametok/">Стікери для нотаток</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/konverti/">Конверти</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/paper-materials/bloki-bumagi-s-klejkim-sloem-zakladki/f1120-stiker-zakladka/">Закладки</a></li>
+                                        <li class="general-menu__def-link"><a href="/ua/stationery/papki-na-zavyazkah/">Теки на зав'язках</a></li>
+                                    </ul>
+                                </ul>
+
+                                <ul class="dd">
+                                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/stationery/bloknoti/">Блокноти, щоденники, книги </a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/bloknoti/f1120-ezhednevnik/">Щоденники</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/bloknoti/f1120-bloknot/">Блокноти</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kalendar/f2274-planing/">Планінги, тижневики</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/bloknoti/f1120-kantcelyarskaya-kniga/">Книги канцелярські</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kalendar/f2274-nastolnij/f2274-nastennij/">Календарі</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-millimetrovaya-bumaga/">Папір масштабно-координатний (міліметрівка)</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-kopirovalnaya-bumaga/">Папір копіювальний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/vatmany/">Папір для креслення (ватман)</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/kopirovalnaya_bumaga/f1120-kalka/">Папір калька</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-magnitnaya/">Папір магнітний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-thermotrans/">Папір термотрансферний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f87-sublimatcionnaya/">Папір сублімаційний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/office-paper/f84-rulon/">Факс-папір</a></li>
+                                </ul>
+                                <p class="imgbrands">
+                                    <a href="/ua/paper-materials/photo-paper/f1-barva/"><img class="general-menu__brand-ico" alt="barva-logo" src="https://prote.ua/image/brands/barva-logo.svg"></a>
+                                    <a href="/ua/paper-materials/konverti/f4949-kuvert/"><img class="general-menu__brand-ico" alt="kuvert-logo" src="https://prote.ua/image/brands/kuvert-logo.svg"></a>
+                                    <a href="/ua/paper-materials/office-paper/f1-xerox/"><img class="general-menu__brand-ico" alt="xerox-logo" src="https://prote.ua/image/brands/xerox-logo.svg"></a>
+                                    <a href="/ua/paper-materials/memo-blocks/f4949-buromax/"><img class="general-menu__brand-ico" alt="buromax-logo" src="https://prote.ua/image/brands/buromax-logo.svg"></a>
+                                </p>
+                            </ul>
+                        </li>
+
+                        <li class="itemmenu">
+                            <a class="titlecategory" href="#">
+                                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/fotobumaga_i_plenki_h.svg">
+                                <span style="padding-left:5%; width: 85%;">Фотопапір та плівка</span>
+                                <span class="general-menu__ico-arrow"></span>
+                            </a>
+                            <ul class="test-divas">
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f84-10x15/" class="computed">Фотопапір 10x15</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/fotobumaga-plenka/photo-paper/f84-13x18/">Фотопапір 13x18</a></li>
+                                    <li class="general-menu__def-link computed"><a href="/ua/paper-materials/photo-paper/f84-a4/">Фотопапір А4</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f84-a3/">Фотопапір А3</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/fotobumaga-plenka/photo-paper/f84-rulon/">Фотопапір широкоформатний</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f13-matovaya/">Фотопапір матовий</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f13-glyantcevaya/">Фотопапір глянцевий</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/fotobumaga-plenka/photo-paper/f23720-2/">Фотопапір двосторонній</a></li>
+                                    <li class="general-menu__def-link computed"><a href="/ua/paper-materials/photo-paper/f13-satin/">Фотопапір сатин</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/f13-superglyantcevaya/">Фотопапір суперглянцевий</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/fotobumaga-plenka/photo-paper/f20-bumaga-samokleyashayasya/">Фотопапір самоклеючий</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-magnitnaya/">Фотопапір магнітний</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-plyonka/f59-dlya-strujnih-ustrojstv/">Плівка для струменевого друку</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-plyonka/f59-dlya-lazernih-ustrojstv/">Плівка для лазерного друку</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link computed"><a href="/ua/fotobumaga-plenka/photo-paper/f20-bumaga-sublimatcionnaya/">Сублімаційний папір</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/fotobumaga-plenka/materials/f20-thermotrans/">Термотрансферний папір</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/paper-materials/canvas/">Полотна</a></li>
+                                    <li class="general-menu__def-link computed"><a href="/ua/paper-materials/canvas/" class="computed">Фактурний фотопапір</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li class="itemmenu">
+                            <a class="titlecategory" href="#">
+                                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/Union.svg">
+                                <span style="padding-left:5%; width: 85%;">Витратні матеріали для принтерів та БФП</span>
+                                <span class="general-menu__ico-arrow"></span>
+                            </a>
+                            <ul class="test-divas">
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/laser-cartridges/orignal/">Картриджі для лазерного другу оригінальні</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/laser-cartridges/compatible/">Картриджі для лазерного другу сумісні</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/cartridges/orignal/">Картриджі для струменевого друку оригінальні</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/cartridges/compatible/">Картриджі для струменевого друку сумісні</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/inks/orignal/">Чорнила для струменевого друку оригінальні</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/inks/compatible/">Чорнила для струменевого друку сумісні</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/dot-print/dot-cartridges/f1098-kartridzh/orignal/">Картриджі для матричного друку оригінальні</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/dot-print/dot-cartridges/f1098-kartridzh/compatible/">Картриджі для матричного друку сумісні</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/dot-print/dot-cartridges/f1098-lenta/">Стрічки для матричного друку</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-patron/">Тонер Patron</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-hg/">Тонер Handan</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-imex/">Тонер Imex</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-cet/">Тонер CET</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-tomoegawa/">Тонер Tomoegawa</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-mitsubishi/">Тонер Mitsubishi</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-tti/">Тонер TTI</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/toner-dlya-lazernyh-printerov/f1-scc/">Тонер Static Control Components</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/fotobarabani/">Фотобарабани</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/valy-t-obolochki/">Вали та оболонки</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/lezviya-ochistki/">Леза</a></li>
+                                    <li class="general-menu__def-link"><a href="/ua/ink-print/chipy-i-mikroshemy/">Чіпи</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+
+    <br><br><br><br><br>
+    <p><br></p>
+
+    <br><br><br><br><br>
+    <p><br></p>
+
+    <style>
+        .imgbrands a:hover {
+            color: #00aff2;
+            transition-duration: 0.3s;
+        }
+        
+        .imgbrands {
+            display: flex;
+            width: auto;
+            height: 60px;
+            position: absolute;
+            align-items: center;
+            -webkit-box-align: center;
+            right: 0;
+        }
+        
+        ul {
+            padding-left: 1%;
+        }
+        
+        li {
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        #primary_nav_wrap li ul:hover {
+            display: block;
+        }
+        
+        #primary_nav_wrap li:hover>ul {
+            display: block;
+        }
+        
+        .general-menu__brand-ico {
+            margin-right: 30px;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
