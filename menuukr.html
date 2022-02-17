@@ -1,0 +1,1255 @@
+<style>
+    #primary_nav_wrap {
+        z-index: 999;
+        position: absolute;
+        top: 40px;
+    }
+    
+    .general-menu {
+        width: 16%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background: #ffffff;
+    }
+    
+    #cssmenu ul .castom-m {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+    }
+    
+    .general-menu__sub-nav {
+        display: block !important;
+        background: #f3f3f3;
+        padding: 22px 22px 22px 50px;
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-column-gap: 28px;
+        -moz-column-gap: 28px;
+        column-gap: 28px;
+        -webkit-perspective: 1;
+    }
+    
+    .general-menu__category-block {
+        width: 222px;
+        margin-bottom: 24px;
+        -moz-column-break-inside: avoid;
+        break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+    }
+    
+    .general-menu__cat-name {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition-duration: 0 !important;
+        transition-duration: 0 !important;
+        font-size: 15px;
+        color: #00aff2;
+        padding-right: 10px;
+    }
+    
+    .general-menu__def-link {
+        margin-bottom: 9px;
+        -webkit-transition-duration: 0;
+        transition-duration: 0;
+    }
+    
+    .general-menu__category-block ul {
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    #cssmenu ul ul li {
+        -webkit-transition: height .2s ease;
+        -moz-transition: height .2s ease;
+        -ms-transition: height .2s ease;
+        -o-transition: height .2s ease;
+        transition: height .2s ease;
+    }
+    
+    .open {
+        display: block;
+    }
+    
+    .general-menu__category-block ul li {
+        font-size: 13px;
+    }
+    
+    #cssmenu .m>ul,
+    #cssmenu ul li a {
+        position: relative;
+    }
+    
+    .general-menu__sub-nav {
+        display: block !important;
+        background: #f3f3f3;
+        padding: 22px 22px 22px 50px;
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-column-gap: 28px;
+        -moz-column-gap: 28px;
+        column-gap: 28px;
+        -webkit-perspective: 1;
+    }
+    
+    .catalog {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        margin-left: 12px;
+        height: 18px;
+    }
+    
+    .cataloge {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        margin-left: 12px;
+        height: 18px;
+    }
+    
+    .naviagte {
+        width: 100%;
+        background: #fd9710;
+        height: 66px;
+        border: 1px solid #fd9710;
+    }
+    
+    .closed {
+        display: none;
+    }
+    
+    .divamen {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .general-menu__brands {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: auto;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .titlecategory {
+        display: flex;
+    }
+    
+    .titlecategory svg {
+        width: 15%;
+    }
+    
+    .general-menu__sub-nav {
+        display: none;
+    }
+    
+    li .titlecategory:hover .general-menu__sub-nav {
+        display: block;
+    }
+    
+    ul {
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .test-divas {
+        background: #f3f3f3;
+        margin-left: 12%;
+        position: fixed;
+        width: 68%;
+        top: 114px;
+        height: 650px;
+        display: none;
+        column-count: 5;
+        padding-bottom: 64px;
+    }
+    
+    .itemmenu {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .itemmenu:hover {
+        z-index: 9999999;
+        background: #f3f3f3;
+    }
+    
+    .general-menu__ico-arrow {
+        position: relative;
+        right: 0px;
+        background: url(https://prote.ua/catalog/view/theme/default/image/icons/right-arrow.svg);
+        width: 6px;
+        color: #00aff2;
+        background-repeat: no-repeat;
+        background-position: top, bottom;
+    }
+    
+    .test-divas ul {
+        padding-top: 5px;
+    }
+    
+    .test-divas .dd {
+        padding-top: 15px;
+    }
+    
+    .openedman {
+        background: url(https://prote.ua/image/menus.svg);
+        background-repeat: no-repeat;
+    }
+    
+    .menusclosed {
+        background: url(https://prote.ua/image/menusclosed.svg);
+        ;
+        background-repeat: no-repeat;
+    }
+    
+    .out {
+        display: none;
+    }
+    
+    .general-menu__def-link a:hover {
+        color: #fd9710;
+        -webkit-transition-duration: 0;
+        transition-duration: 0;
+    }
+    
+    .general-menu__def-link a {
+        color: black;
+    }
+    
+    .header__catalogss {
+        width: 18%;
+        margin-top: 5px;
+    }
+    
+    .general-menu__icon {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+
+
+<script>
+    function ttt() {
+        var actives = document.getElementsByClassName('aim general-menu');
+        var currentActive = actives[0];
+        if (currentActive)
+            actives[0].className = (actives[0].className == 'aim general-menu closed' ? 'aim general-menu active' : 'aim general-menu closed')
+        var activese = document.getElementsByClassName('menuses');
+        var currentActivee = activese[0];
+        if (currentActivee)
+            activese[0].className = (activese[0].className == 'menuses openedman' ? 'menuses menusclosed' : 'menuses openedman')
+        var activese = document.getElementsByClassName('catalog');
+        var currentActivee = activese[0];
+        if (currentActivee)
+            activese[0].className = (activese[0].className == 'catalog in' ? 'catalog out' : 'catalog in')
+        var activese = document.getElementsByClassName('cataloge');
+        var currentActivee = activese[0];
+        if (currentActivee)
+            activese[0].className = (activese[0].className == 'cataloge in' ? 'cataloge out' : 'cataloge in')
+    };
+</script>
+
+
+<a onclick="ttt(); return false" href="#">
+
+
+
+    <span class="menuses openedman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+    <span class="cataloge out">Закрити</span> <span class="catalog in">Каталог</span></a>
+<ul id="primary_nav_wrap" class="aim general-menu closed">
+    <li class="itemmenu">
+        <a class="titlecategory" href="/ua/paper-materials/">
+            <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/paper_h.svg">
+            <span style="padding-left:5%; width: 75%;">Папір та паперова продукція</span>
+            <span class="general-menu__ico-arrow"></span>
+        </a>
+        <ul class="test-divas">
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="https://prote.ua/ua/paper-materials/office-paper/">Папір офісний</a>
+                </li>
+
+
+                <ul>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/office-paper/">Папір офісний</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/tsvetnaya_bumaga/">Папір кольоровий</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/ofsetnaya-bumaga/">Папір офсетний</a></li>
+                </ul>
+
+
+
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="https://prote.ua/ua/paper-materials/">Стрічки, цінники, етикетки</a>
+                </li>
+                <ul>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/cass-tape/">Стрічка касова</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/cass-tape/f2544-80-mm/">Стрічка для систем електронної черги</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/labels/"> Самоклеючі етикетки</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/tsenniki/">Цінники</a></li>
+                </ul>
+            </ul>
+            <ul>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/bloknoti/f1120-ezhednevnik/">Щоденники</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/bloknoti/f1120-bloknot/">Блокноти</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kalendar/f2274-planing/">Планінги, тижневики</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/bloknoti/f1120-kantcelyarskaya-kniga/">Книги канцелярські</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kalendar/f2274-nastolnij/f2274-nastennij/">Календарі</a></li>
+            </ul>
+            <ul>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-millimetrovaya-bumaga/">Папір масштабно-координатний (міліметрівка)</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-kopirovalnaya-bumaga/">Папір копіювальний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/vatmany/">Папір для креслення (ватман)</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-kalka/">Папір калька</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-magnitnaya/">Папір магнітний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-thermotrans/">Папір термотрансферний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f87-sublimatcionnaya/">Папір сублімаційний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/office-paper/f84-rulon/">Факс-папір</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Папір спеціальний</a>
+                </li>
+                <ul>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-millimetrovaya-bumaga/">Папір масштабно-координатний (міліметрівка)</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-kopirovalnaya-bumaga/">Папір копіювальний</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/vatmany/">Папір для креслення (ватман)</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-kalka/">Папір калька</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-magnitnaya/">Папір магнітний</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-thermotrans/">Папір термотрансферний</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f87-sublimatcionnaya/">Папір сублімаційний</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/office-paper/f84-rulon/">Факс-папір</a></li>
+                </ul>
+            </ul>
+
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="prote.ua/ua/paper-materials/">Паперові вироби</a>
+                </li>
+                <ul>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/memo-blocks/">Блоки паперу для нотаток</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/bloki-bumagi-s-klejkim-sloem-zakladki/f1120-stiker-dlya-zametok/">Стікери для нотаток</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/konverti/">Конверти</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/bloki-bumagi-s-klejkim-sloem-zakladki/f1120-stiker-zakladka/">Закладки</a></li>
+                    <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/papki-na-zavyazkah/">Теки на зав'язках</a></li>
+                </ul>
+            </ul>
+
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="https://prote.ua/ua/stationery/bloknoti/">Блокноти, щоденники, книги </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/bloknoti/f1120-ezhednevnik/">Щоденники</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/bloknoti/f1120-bloknot/">Блокноти</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kalendar/f2274-planing/">Планінги, тижневики</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/bloknoti/f1120-kantcelyarskaya-kniga/">Книги канцелярські</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kalendar/f2274-nastolnij/f2274-nastennij/">Календарі</a></li>
+            </ul>
+            <ul>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-millimetrovaya-bumaga/">Папір масштабно-координатний (міліметрівка)</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-kopirovalnaya-bumaga/">Папір копіювальний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/vatmany/">Папір для креслення (ватман)</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/kopirovalnaya_bumaga/f1120-kalka/">Папір калька</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-magnitnaya/">Папір магнітний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-thermotrans/">Папір термотрансферний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f87-sublimatcionnaya/">Папір сублімаційний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/office-paper/f84-rulon/">Факс-папір</a></li>
+            </ul>
+            <p class="imgbrands">
+                <a href="https://prote.ua/ua/paper-materials/photo-paper/f1-barva/"><img class="general-menu__brand-ico" alt="barva-logo" src="https://prote.ua/image/brands/barva-logo.svg"></a>
+                <a href="https://prote.ua/ua/paper-materials/konverti/f4949-kuvert/"><img class="general-menu__brand-ico" alt="kuvert-logo" src="https://prote.ua/image/brands/kuvert-logo.svg"></a>
+                <a href="https://prote.ua/ua/paper-materials/office-paper/f1-xerox/"><img class="general-menu__brand-ico" alt="xerox-logo" src="https://prote.ua/image/brands/xerox-logo.svg"></a>
+                <a href="https://prote.ua/ua/paper-materials/memo-blocks/f4949-buromax/"><img class="general-menu__brand-ico" alt="buromax-logo" src="https://prote.ua/image/brands/buromax-logo.svg"></a>
+            </p>
+        </ul>
+    </li>
+
+    <li class="itemmenu">
+        <a class="titlecategory" href="/ua/fotobumaga-plenka/">
+            <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/fotobumaga_i_plenki_h.svg">
+            <span style="padding-left:5%; width: 75%;">Фотопапір та плівка</span>
+            <span class="general-menu__ico-arrow"></span>
+        </a>
+        <ul class="test-divas">
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/paper-materials/photo-paper/">Фотопапір</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f84-10x15/" class="computed">Фотопапір 10x15</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/fotobumaga-plenka/photo-paper/f84-13x18/">Фотопапір 13x18</a></li>
+                <li class="general-menu__def-link computed"><a href="https://prote.ua/ua/paper-materials/photo-paper/f84-a4/">Фотопапір А4</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f84-a3/">Фотопапір А3</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/fotobumaga-plenka/photo-paper/f84-rulon/">Фотопапір широкоформатний</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f13-matovaya/">Фотопапір матовий</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f13-glyantcevaya/">Фотопапір глянцевий</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/fotobumaga-plenka/photo-paper/f23720-2/">Фотопапір двосторонній</a></li>
+                <li class="general-menu__def-link computed"><a href="https://prote.ua/ua/paper-materials/photo-paper/f13-satin/">Фотопапір сатин</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/photo-paper/f13-superglyantcevaya/">Фотопапір суперглянцевий</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/fotobumaga-plenka/photo-paper/f20-bumaga-samokleyashayasya/">Фотопапір самоклеючий</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-magnitnaya/">Фотопапір магнітний</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/paper-materials/materials/f20-plyonka/">Плівка</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-plyonka/f59-dlya-strujnih-ustrojstv/">Плівка для струменевого друку</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/materials/f20-plyonka/f59-dlya-lazernih-ustrojstv/">Плівка для лазерного друку</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Спеціальний папір</a>
+                </li>
+                <li class="general-menu__def-link computed"><a href="https://prote.ua/ua/fotobumaga-plenka/photo-paper/f20-bumaga-sublimatcionnaya/">Сублімаційний папір</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/fotobumaga-plenka/materials/f20-thermotrans/">Термотрансферний папір</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/paper-materials/canvas/">Художні матеріали</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/paper-materials/canvas/">Полотна</a></li>
+                <li class="general-menu__def-link computed"><a href="https://prote.ua/ua/paper-materials/canvas/" class="computed">Фактурний фотопапір</a></li>
+            </ul>
+        </ul>
+    </li>
+
+
+
+
+
+
+
+
+    <li class="itemmenu">
+        <a class="titlecategory" href="/ua/ink-print/">
+            <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/Union.svg">
+            <span style="padding-left:5%; width: 75%;">Витратні матеріали для принтерів та БФП</span>
+            <span class="general-menu__ico-arrow"></span>
+        </a>
+        <ul class="test-divas">
+
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/ink-print/laser-cartridges/">Лазерні картриджі</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/laser-cartridges/orignal/">Картриджі для лазерного другу оригінальні</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/laser-cartridges/compatible/">Картриджі для лазерного другу сумісні</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/ink-print/cartridges/">Картриджі для струменевого друку</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/cartridges/orignal/">Картриджі для струменевого друку оригінальні</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/cartridges/compatible/">Картриджі для струменевого друку сумісні</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/ink-print/inks/">Чорнила для струменевого друку</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/inks/orignal/">Чорнила для струменевого друку оригінальні</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/inks/compatible/">Чорнила для струменевого друку сумісні</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/dot-print/dot-cartridges/">Картриджі для матричного друку</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/dot-print/dot-cartridges/f1098-kartridzh/orignal/">Картриджі для матричного друку оригінальні</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/dot-print/dot-cartridges/f1098-kartridzh/compatible/">Картриджі для матричного друку сумісні</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/dot-print/dot-cartridges/f1098-lenta/">Стрічки для матричного друку</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/ink-print/toner-dlya-lazernyh-printerov/">Тонер для заправки картриджів</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-patron/">Тонер Patron</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-hg/">Тонер Handan</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-imex/">Тонер Imex</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-cet/">Тонер CET</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-tomoegawa/">Тонер Tomoegawa</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-mitsubishi/">Тонер Mitsubishi</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-tti/">Тонер TTI</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/toner-dlya-lazernyh-printerov/f1-scc/">Тонер Static Control Components</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Комплектуючі для заправки та відновлення картриджів</a>
+                </li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/fotobarabani/">Фотобарабани</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/valy-t-obolochki/">Вали та оболонки</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/lezviya-ochistki/">Леза</a></li>
+                <li class="general-menu__def-link"><a href="https://prote.ua/ua/ink-print/chipy-i-mikroshemy/">Чіпи</a></li>
+            </ul>
+        </ul>
+    </li>
+
+
+
+    <li class="itemmenu">
+        <a class="titlecategory" href="/ua/stationery/">
+            <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/kanctovaty-icon_h.svg">
+            <span style="padding-left:5%; width: 75%;">Канцтовари</span>
+            <span class="general-menu__ico-arrow"></span>
+        </a>
+        <ul class="test-divas">
+
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Письмове приладдя</a>
+                </li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/ruchki-sharikovie/">Ручки кулькові</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/ruchki-gelevie/">Ручки гелеві</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/maslyanie-ruchki/">Ручки масляні (олійні)</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/sterjni-dlja-ruchek/">Стрижні для ручок</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/podarochnye-ruchki/">Подарункові ручки</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/sterjni-dlja-ruchek/f2274-kapsuli-s-chernilami/">Чорнила для ручок</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/grafitovie-karandashi/">Олівці графітові</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/mehanicheskie-karandashi/">Олівці механічні</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/mehanicheskie-karandashi/f2274-zapasnie-sterzhni/">Стрижні для механічних олівців</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/markeri-permanentnie/">Маркери перманентні</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/markeri-dlya-videleniya-teksta/">Маркери для виділення тексту</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/markeri-dlya-magnitnih-dosok-i-flipchartov/f1120-dlya-flipchartov/">Маркери для фліпчартів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/markeri-dlya-magnitnih-dosok-i-flipchartov/f1120-suhostiraemij/">Маркери для магнітних дошок</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Папки і архівація</a>
+                </li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/vizitnitsy/">Візитниці</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/fajli-dlya-dokumentov/">Файли для документів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-registratori/">Теки-реєстратори</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-s-prizhimom/">Теки-швидкозшивачі</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-s-prizhimom/f2484-s-bokovim-prizhimom/">Теки з притиском</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki/">Теки </a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-s-prizhimom/f2484-s-fajlami/">Теки з файлами</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-na-rezinkah/">Теки на резинках</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-na-zavyazkah/">Теки на зав'язках</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-portfeli/f1120-delovaya-papka/">Текі ділові на блискавці</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-na-knopkah/">Теки-конверти</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/papki-portfeli/">Папки-портфелі</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/klipbordi-plansheti/">Кліпборди (планшети)</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/boksy-i-koroba-dlja-arhivacii/f1120-boksi/">Бокси для архівації</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/boksy-i-koroba-dlja-arhivacii/f1120-koroba/">Короба для архівації</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Канцелярські дрібниці</a>
+                </li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/korrektor-ruchka/">Коректор-ручка</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/korrektor-lentochnij/">Коректор стрічковий</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/korrektor-s-kistochkoy/">Коректор з пензликом</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/klej-karandash/">Клей-олівець</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/klej-pva/">Канцелярський клей, ПВА</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/rezinki-dlya-deneg/">Резинки для грошей</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/skobi-dlya-steplerov/">Скоби для степлерів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/skrepki/">Скріпки</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/lastiki/">Гумки</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/skotch/">Клейка стрічка, скотч</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/binderi-zazhimi/">Біндери (затискачі)</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/knopki-bulavki-kantcelyarskie/f1120-knopki/">Кнопки</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/knopki-bulavki-kantcelyarskie/f1120-bulavki/">Шпилькі канцелярські</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/uvlazhniteli-dlya-paltcev/">Зволожувачі для пальців</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Офісне приладдя</a>
+                </li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/destepleri-rasshivateli-skob/">Антистеплери</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/stepleri/">Степлери</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/skobi-dlya-steplerov/">Скоби для степлерів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/kantcelyarskie-nozhi/">Ножі канцелярські</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/kantcelyarskie-nozhi/f1120-lezvie/">Леза для ножів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/tochilki/">Точилки</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/linejki/">Лінійки</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/nozhnitci/">Ножиці</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/dirokoli/">Діркопробивачі</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Організація робочого місця</a>
+                </li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/lotki-gorizontalnie/">Лотки горизонтальні</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/lotki-vertikalnie/">Лотки вертикальні</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/nabori-nastolnie-s-napolneniem/">Набори настільні з наповненням</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/nastolnie-pribori-podstavki/f2428-organajzer/">Підставки для канцелярського приладдя</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/nastolnie-pribori-podstavki/f2428-podstavka-dlya-vizitok/">Підставки для візиток</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/nastolnie-pribori-podstavki/f2428-stakan-dlya-ruchek/">Стакани (підставки) для ручок і олівців</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/korziny-dlja-bumag/">Кошики для паперів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/boksi-dlya-bumazhnih-blokov/">Бокси для паперових блоків</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/boksi-dlya-skrepok/">Бокси для скріпок</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/nastolnie-pribori-podstavki/f2428-tablichka/">Таблички інформаційні</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/globusy/">Глобуси</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/calculatory/">Калькулятори</a></li>
+            </ul>
+            <ul class="dd">
+                <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Штемпельна продукція</a>
+                </li>
+                <li class="general-menu__def-link"><a href="/ua/office-supplies/stamp-ink/">Фарба штемпельна</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-dateri/">Датери</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-numeratori/">Нумератори</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-samonabornie-shtampi/">Самонабірні штампи</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-shtampi/">Штампи</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-osnastki/">Оснастки для штампів та печаток</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-nabori-znakov-kassi/">Набори знаків для самонабірних штампів</a></li>
+                <li class="general-menu__def-link"><a href="/ua/stationery/shtampy-i-pechati/f1120-shtempelnie-podushki/">Подушки штемпельні</a></li>
+            </ul>
+
+            <p class="imgbrands">
+                <a href="/buromax/"><img class="general-menu__brand-ico" alt="buromax-logo" src="https://prote.ua/image/brands/buromax-logo.svg"></a>
+                <a href="/maped/"><img class="general-menu__brand-ico" alt="maped.svg" src="https://prote.ua/image/brands/maped.svg"></a>
+            </p>
+        </ul>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/bytovaya-himija/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/pobutova-himia-icon_h.svg">
+                <span style="padding-left:5%; width: 75%;">Побутова хімія</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+
+
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/bytovaya-himija/">Засоби гігієни</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f24065-dlya-ruk/">Антисептики</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/tualetnoe-mylo/">Мило</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/tualetnoe-mylo/f19327-gel-shampun/">Шампунь для волос</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Засоби для прибирання</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/osvejiteli-vozduha-poliroli/f1656-osvezhitel-vozduha/">Освіжувачі повітря</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/osvejiteli-vozduha-poliroli/f1656-polirol-dlya-mebeli/">Поліролі для меблів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-moyki-stekla/">Засоби для миття вікон</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-polov/">Засоби для миття підлоги</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/universalnye-sredstva-dlya-chistki/f1656-dlya-chistki/f1656-universalnie/">Засоби чистячі універсальні</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/bytovaya-himija/credstva-dlya-stirki-i-pyaten/">Засоби для прання</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/credstva-dlya-stirki-i-pyaten/f4497-stiralnie-poroshki/">Порошки для прання</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/credstva-dlya-stirki-i-pyaten/f4497-zhidkie-stiralnie-poroshki/">Гелі для прання</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/credstva-dlya-stirki-i-pyaten/f4497-kapsuli-dlya-stirki/">Капсули для прання</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/credstva-dlya-stirki-i-pyaten/f4497-konditcioneri-opolaskivateli/">Кондиціонери, ополіскувачі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/credstva-dlya-stirki-i-pyaten/f4497-pyatnovivoditeli-otbelivateli/">Засоби для виведення плям, відбілювачі</a></li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f4437-zhidkoe-sredstvo/">Засоби для миття посуду</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f1656-dlya-grilya/">Засоби для чищення гриля</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f1656-dlya-udaleniya-nakipi/">Засоби для видалення накипу</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f1656-dlya-uhoda-i-zashiti/">Засоби по догляду та захисту</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f1656-dlya-duhovok/">Засоби для очищення духовок та плит</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f1656-dlya-kofemashin/">Засоби для очищення кавоварок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f1656-dlya-posudomoechnih-mashin/">Засоби для посудомийних машин</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/sredstva-dlya-mytya-posudy/f4437-sprej-dlya-kuhni/">Спреї для кухні</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/bytovaya-himija/universalnye-sredstva-dlya-chistki/">Засоби для чищення ванної та туалету</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/universalnye-sredstva-dlya-chistki/f1656-dlya-vannoj/">Засоби для прибирання ванн і раковин</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/universalnye-sredstva-dlya-chistki/f1656-dlya-unitaza/">Засоби для чищення унітазів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/universalnye-sredstva-dlya-chistki/f1656-dlya-chistki/">Порошки чистячі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-himija/universalnye-sredstva-dlya-chistki/f1656-dlya-prochistki-trub/">Засоби для прочищення труб</a></li>
+                </ul>
+            </ul>
+        </li>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/hoztovary/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/gosp-tovary-icon_h.svg">
+                <span style="padding-left:5%; width: 75%;">Господарчі товари</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Паперова продукція</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/salfetki/">Серветки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/bumajnye-polotenca/">Рушники паперові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/tualetnaya-bumaga/">Папір туалетний</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Посуд</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/tarelki/">Тарілки одноразові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/stakanchiki/">Стаканчики, чашки одноразові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/pyshchevye_konteinery/">Ємності для зберігання продуктів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/pribory-palochki-dlya/">Столові прилади одноразові</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Диспенсери, тримачі</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/bumagoderzhateli/">Тримачі для паперу</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/derzhateli_bumazhnyh_polotenec/">Тримачі паперових рушників</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/dozatory_dlya_myla/">Дозатори для мила</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Аксесуари для прибирання</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/gubki-salfetki-skrebki/f1120-kuhonnaya-gubka/">Губки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/gubki-salfetki-skrebki/f1120-mikrofibra/">Серветки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/gubki-salfetki-skrebki/f1120-metallicheskij-skrebok/">Шкребки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/perchatki/">Рукавички</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/pakety-dlya-musora/">Пакети для сміття</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/pischevaya-plenka-pakety/">Плівка харчова, пакети</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Інвентар для прибирання </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/vedra/">Відра та віджими</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/emkosti-dlja-musora/">Ємності для сміття</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/shvabry/">Швабри, тримачі мопів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/nasadki-dlya-shvabr-mopy/">Насадки для швабр, мопи</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/shvabry-vedra-sovki/f1098-sovok-plyusshetka/f1098-shetka-dlya-pola/">Щітки для прибирання</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/schetki/">Щітки господарські, йоржики</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/shvabry-vedra-sovki/f1098-sovok/">Совки для прибирання </a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/telezhky/">Візки для прибирання</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Освітлення, лампи</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/lampy-nakalivanija/">Лампи розжарювання</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/svetodiodnye-lampy/">Світлодіодні лампи</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/hoztovary/energosberegauschie-lampy/">Енергозберігаючі лампи</a></li>
+                </ul>
+            </ul>
+        </li>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/markirovka-upakovka/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/maruvanya_ta_pakuvany_h.svg">
+                <span style="padding-left:5%; width: 75%;">Товари для маркування та пакування</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Обладнання та витратні матеріали</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/barcode-scanners/">Сканери штрих-кодів</a></li>
+                    <li class="general-menu__def-link"><a href="/">Принтери друку чеків та етикеток</a></li>
+                    <li class="general-menu__def-link"><a href="/">Рибони для принтерів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/labels/">Етикетки самоклеючі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/tsenniki/f1098-pistolet/">Етикет-пістолети</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/tsenniki/f1098-tcennik/">Етикетки для етикет-пістолетів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/kantcelyarskie-nozhi/">Ножі канцелярські</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/kantcelyarskie-nozhi/f1120-lezvie/">Леза для ножів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/skotch/f1120-pistolet/">Диспенсери для клеючої стрічки (скотчу)</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/markirovka-upakovka/skotch/">Стрічка клеюча (скотч)</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/markeri-permanentnie/">Маркери</a></li>
+                </ul>
+
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Пакувальні матеріали</a>
+                    </li>
+
+                    <li class="general-menu__def-link"><a href="/ua/stationery/skotch/f1120-upakovochnij/">Скотч пакувальний</a></li>
+                    <li class="general-menu__def-link"><a href="/">Плівки пакувальні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Коробки картонні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Листи картонні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/labels/">Етикетки самоклеючі</a></li>
+                    <li class="general-menu__def-link"><a href="/">Пакети пакувальні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Стрічка пакувальна</a></li>
+                </ul>
+            </ul>
+        </li>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/prezentatsii-vystavki/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/presentation-icon_h.svg">
+                <span style="padding-left:5%; width: 75%;">Товари для презентацій та виставок</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/stationery/doski-flipcharty/">Дошки, фліпчарти</a>
+                    </li>
+
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-flipchart/">Фліпчарти</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-magnitno-markernie/" class="computed">Дошки магнітно-маркерні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-probkovie/">Дошки коркові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-tekstilnie/" class="computed">Дошки текстильні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-dzhutovaya-doska/" class="computed">Дошки джутові </a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-kombinirovannaya-doska/" class="computed">Дошки комбіновані</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-keramicheskaya-doska/" class="computed">Дошки керамічні </a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-steklyannaya-doska/" class="computed">Дошки скляні </a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-doska-planer/" class="computed">Дошки-планери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/doski-flipcharty/f1120-doska-dlya-mela/" class="computed">Дошки для писання крейдою</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Аксесуари для дошок</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/blok-flipchartov/">Папір для фліпчартів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/gubki-magnity/f1120-gubka-s-magnitom/">Губки для дощок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/gubki-magnity/f1120-komplekt-4-markera-gubka/">Набори для дощок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/gubki-magnity/f1120-magniti/">Магніти для дошок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/knopki-bulavki-kantcelyarskie/">Кнопки, шпильки канцелярські</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/markeri-dlya-magnitnih-dosok-i-flipchartov/f1120-suhostiraemij/">Маркери для маркерних дошок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/markeri-dlya-magnitnih-dosok-i-flipchartov/f1120-dlya-flipchartov/">Маркери для фліпчартів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f59-dlya-markernih-dosok/">Спреї для маркерних дошок</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Інтерактивне обладнання</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/projector/">Проектори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/projection-screen/">Проекційні екрани</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/hangers/">Кронштейни для проектора</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/projector-lamp/">Лампи для проекторів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/lcd-panel/">LCD панель</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/smart-boards/">Дошки інтерактивні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/smart-boards-bar/">Підставки для інтерактивних дошок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/presentors/">Презентери</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Рекламні носії</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/dvernye_i_nastennye_tablichki/">Таблички дверні і настінні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/informacionnye_stojki/">Інформаційні стійки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/shtendery/">Штендери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/ramki_plakatnye/">Рамки плакатні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/stojki_dlya_bannerov/">Стійки для банерів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/stojki_dlya_broshyur/">Стійки для брошур</a></li>
+                </ul>
+                <p class="imgbrands">
+                    <a href="/ua/stationery/doski-flipcharty/f1-buromax/"><img class="general-menu__brand-ico" alt="buromax-logo" src="https://prote.ua/image/brands/buromax-logo.svg"></a>
+                    <a href="/ua/stationery/doski-flipcharty/f1-2h3/"><img class="general-menu__brand-ico" alt="2-3-logo" src="https://prote.ua/image/brands/2-3-logo.svg"></a>
+                </p>
+            </ul>
+
+        </li>
+
+        <li class="itemmenu">
+            <a class="titlecategory" href="/comp-accessories/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/komp-akses-icon (1).svg">
+                <span style="padding-left:5%; width: 75%;">Ноутбуки и компьютерная техника</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Комп'ютери</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/pc/">Персональні комп'ютери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/monitors/">Монітори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/upc/">Джерела безперебійного живлення</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/ups-batterys/">Батареї для ДБЖ</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/surge-protectors/">Фільтри мережеві</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Комп'ютерні комплектуючі</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/processory/">Процесори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/processor-cooler/">Вентилятори для процесора</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/materinskie-platy/">Материнські плати</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/pc-hdd/">Жорсткі диски</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/ssd-nakopiteli/">SSD-накопичувачі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/pc-ram/">Оперативна пам'ять</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/opticheskie-privody/">Оптичні приводи</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/videokarty/">Відеокарти</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/pc-cases/">Комп'ютерні корпуса</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/case-cooler/">Вентилятори для корпуса</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/pc-power-supply/">Блоки живлення</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/voltage-stabilizer/">Стабілізатори</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/comp-accessories/noutbuky/">Ноутбуки</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/noutbuky/f4949-apple/">Ноутбуки Apple</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/noutbuky/f4949-lenovo/">Ноутбуки Lenovo</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/noutbuky/f4949-asus/">Ноутбуки Asus</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/noutbuky/f4949-acer/">Ноутбуки Acer</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/noutbuky/f4949-dell/">Ноутбуки Dell</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/noutbuky/f4949-hp/">Ноутбуки HP</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Аксесуари для ПК та ноутбуків</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/keyboards-mouse/f100380-radio/">Мишки бездротові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/keyboards-mouse/f100380-ps2/f100380-usb/">Мишки дротові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/mousepad/">Килимки для мишок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/keyboards/f100087-provodnaya/">Клавіатури дротові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/keyboards/f100087-besprovodnaya/">Клавіатури бездротові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/web-cams/">Веб-камери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/speakers/">Колонки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/hradphones/">Навушники і гарнітури</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/microphones/">Мікрофони</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/usb-cables/"> Кабелі та перехідники</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/">Чистячі засоби для офісної техніки</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Принтери та багатофункціональні пристрої</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/laser-printers/">Принтери лазерні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/mfu-lazernye/">БФП лазерні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/ink-printers/">Принтери струменеві</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/mfu-struinye/">БФП струменеві</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/dot-matrix-printer/">Принтери матричні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/label-printers/">Принтери етикеток</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/check-printers/">Принтери чеків</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/plotter/">Плоттери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/3d-print/">Принтери 3D</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/usb-cables/">Кабелі та перехідники</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/">Чистячі засоби для офісної техніки</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Витратні матеріали для принтерів та МФУ</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/laser-print/laser-cartridges/">Картриджі для лазерних принтерів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/ink-print/cartridges/">Картриджі для струменевого друку</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/ink-print/inks/">Чорнила для струменевого друку</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/dot-print/dot-cartridges/f1098-kartridzh/">Картриджі для матричного друку</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/dot-print/dot-cartridges/f1098-lenta/">Стрічки для матричного друку</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/office-paper/">Папір офісний</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/photo-paper/">Фотопапір</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/paper-materials/materials/f20-plyonka/">Плівка</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/">Чистячі засоби для офісної техніки</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Сканери</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/scanners/f100258-planshetnij/">Сканери планшетні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/scanners/f100258-protyazhnij/">Сканери протяжні</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Мережеве обладнання</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/routers/">Маршрутизатори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/modems/">Модеми</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/network-switch/">Комутатор мережевий </a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/wi-fi-access-points/">Точка доступу Wi-Fi</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/network-cams/">Камери мережеві</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/wi-fi-cards/">Мережеві карти Wi-Fi</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/adapter-poe/">Адаптер POE</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/firewalls/">Файрвол</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/setevoy-kabel/">Кабеля мережеві та аксесуари</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Мережеве обладнання</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/comp-accessories/programnoe-obespechenie/">Антивирусы</a></li>
+                </ul>
+
+            </ul>
+        </li>
+
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/office-supplies/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/ofisne-obladn-icon_h.svg">
+                <span style="padding-left:5%; width: 75%;">Офісна техніка</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Офісна телефонія</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/ip-telefony/">IP телефони</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/stacionarnye-telefony/">Стаціонарні телефони</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/radio-telefony/">Радіо телефони (DECT)</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/ip-atc/">IP АТС</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/gsm-shlyuzy/">Міжмережеві GSM-шлюзи</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/voip-shlyuzy/">VoIP-шлюзи</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/mini-atc/">Міні-АТС</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/sistemnye-konsoli/">Системні консолі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/fax-apparaty/">Факсимільні апарати</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/stationery/calculatory/">Калькулятори</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/calculatory/f1120-nastolnij/">Калькулятори настільні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/calculatory/f1120-karmannij/"> Калькулятори кишенькові</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/calculatory/f1120-inzhenernij/">Калькулятори інженерні</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Знищувачі документів, різаки паперу</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/shreders/">Знищувачі паперів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/trimmers/">Різаки</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/office-supplies/laminators/">Ламинатори</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/laminators/f1285-laminatori/">Ламінатори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/laminators/f1285-plenka-dlya-laminatora/">Плівки для ламінування</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Біндери та аксесуари</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/binders/f104471-gorizontalnaya/f104471-ruchnaya/">Біндери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/binders/f1285-oblozhka-dlya-broshyurovshika/">Обкладинки для брошурування</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/binders/f1285-pruzhina-dlya-broshyurovshika/">Пружини для брошурування</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Освітлення і електроживлення</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/nastolnyye-lampy/">Лампочки настільні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/upc/">Джерела безперебійного живлення</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/ups-batterys/">Батареї для ДБЖ</a></li>
+                    <li class="general-menu__def-link"><a href="/comp-accessories/surge-protectors/">Фільтри-подовжувачі</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Носії інформації</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/memory-cards/">Карти пам'яті</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/flash-memory/">USB флеш-накопичувачі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cd-dvd/">CD та DVD диски</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/comp-accessories/cleaners/">Засоби по догляду за офісною технікою</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f11-dlya-vseh-tipov-poverhnostej/">Універсальні чистячі засоби</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f3-paket/f3-tuba/f11-dlya-ekranov/">Серветки для екранів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f3-sprej/f11-dlya-ekranov/">Спреї для екранів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f3-sprej/f11-dlya-ofisnoj-tehniki/">Спреї для оргтехніки і пластика</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f59-dlya-markernih-dosok/">Спреї для маркерних дощок</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f5-sprej-salfetka/">Чистячі набори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f3-tuba/">Чистячі набори, серветки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f5-ballon-s-szhatim-vozduhom/">Очищуюче стиснене повітря</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/cleaners/f59-dlya-avtomobilya-universalnij/f59-dlya-avtostekla/">Чистячі засоби для автомобіля</a></li>
+                </ul>
+            </ul>
+        </li>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/personalnaya-tekhnika/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/smatfoni_i_plansheti_h.svg">
+                <span style="padding-left:5%; width: 75%;">Персональна техніка</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/comp-accessories/smartfony-planshety/" href="/">Планшети</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-alcatel/">Alcatel</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-apple/">Apple</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-huawei/">Huawei</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-lenovo/">Lenovo</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-microsoft/">Microsoft</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-samsung/">Samsung</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/personalnaya-tekhnika/smartfony-planshety/f4949-prestigio/">Prestigio</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/" onclick="return false" href="/">Аксесуари</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/vneshnie-akkumulyatory/">Powerbank</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/usb-cables/f59-zaryadnoe-ustrojstvo/">Пристрої зарядні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/usb-cables/f59-kabeli-sinhronizatcii/">Кабелі синхронізації</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/usb-cables/f59-multimedia/">Кабелі мультимедійні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/accu-cells/f1098-batarejki/">Батарейки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/comp-accessories/accu-cells/f1098-akkumulyatori/">Акумулятори</a></li>
+                </ul>
+            </ul>
+        </li>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/bytovaya-tekhnika/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/pobut-tehnika-icon_h.svg">
+                <span style="padding-left:5%; width: 75%;">Побутова техніка</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/" onclick="return false" href="/">Кухонне обладнання</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/vesy-kuhonnye/">Ваги кухонні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/kofemolki/">Кавомолки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/kofemashiny/">Кавоварки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/mikrovolnovye-pechi/">Мікрохвильові печі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/elektrochajniki/">Електрочайники</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/termopoty/">Термопоти</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/toster/">Тостери</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/" onclick="return false" href="/">Велика побутова техніка</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/bytovaya-tekhnika/holodilnikу/">Холодильники</a></li>
+                    <li class="general-menu__def-link"><a href="/">Телевізори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/pylеsosy/">Пилососи</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/" onclick="return false" href="/">Кліматичне обладнання</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/bojlery/">Водонагрівачі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/ventilyatory/">Вентилятори</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/obogrevateli/">Обігрівачі</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/kondicionery/">Кондиціонери</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/ochistiteli/">Очищувачі повітря</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/sushilki/">Сушарки для рук</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/office-supplies/uvlazhniteli/">Зволожувачі повітря</a></li>
+                </ul>
+            </ul>
+        </li>
+        <li class="itemmenu">
+            <a class="titlecategory" href="/ua/instrument-spetsodezhda/">
+                <img class="general-menu__icon" style="width:24px;" alt="img-menu" src="https://prote.ua/image/catalog/ico_menu/Instrumenti_i_spec_odyg_h.svg">
+                <span style="padding-left:5%; width: 75%;">Інструмент та спецодяг</span>
+                <span class="general-menu__ico-arrow"></span>
+            </a>
+            <ul class="test-divas">
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/instrument-spetsodezhda/electroinstrument/">Електроінструмент</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/instrument-spetsodezhda/electroinstrument/shurupoverty/">Шуруповерти</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/instrument-spetsodezhda/electroinstrument/dreli-i-perforatory/">Дрилі та перфоратори</a></li>
+                    <li class="general-menu__def-link"><a href="/">Болгарки</a></li>
+                    <li class="general-menu__def-link"><a href="/">Пили дискові</a></li>
+                    <li class="general-menu__def-link"><a href="/">Фени будівельні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Пістолети клейові</a></li>
+                    <li class="general-menu__def-link"><a href="/">Електролобзики</a></li>
+                    <li class="general-menu__def-link"><a href="/">Верстати точильні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Акумулятори та зарядні пристрої</a></li>
+                    <li class="general-menu__def-link"><a href="/">Набори електроінструментів </a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" href="/ua/instrument-spetsodezhda/ruchnoj-instrument/">Ручний інструмент</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/">Ключі та набори ключів</a></li>
+                    <li class="general-menu__def-link"><a href="/">Молотки та киянки</a></li>
+                    <li class="general-menu__def-link"><a href="/">Викрутки</a></li>
+                    <li class="general-menu__def-link"><a href="/">Плоскогубці та кусачки</a></li>
+                    <li class="general-menu__def-link"><a href="/">Ножиці по металу</a></li>
+                    <li class="general-menu__def-link"><a href="/">Ножовки</a></li>
+                    <li class="general-menu__def-link"><a href="/">Мультитули</a></li>
+                    <li class="general-menu__def-link"><a href="/">Зубила та стамески</a></li>
+                    <li class="general-menu__def-link"><a href="/">Напилки та надфілі</a></li>
+                    <li class="general-menu__def-link"><a href="/">Шпателі</a></li>
+                    <li class="general-menu__def-link"><a href="/">Степлери</a></li>
+                    <li class="general-menu__def-link"><a href="/">Пістолети для клею та піни</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/instrument-spetsodezhda/lopaty/">Лопати</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/instrument-spetsodezhda/topory/">Сокири</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Вимірювальний інструмент</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/">Рулетки</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/linejki/">Лінійки та косинці</a></li>
+                    <li class="general-menu__def-link"><a href="/">Рівні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Штангенциркулі</a></li>
+                    <li class="general-menu__def-link"><a href="/">Мультиметри</a></li>
+                    <li class="general-menu__def-link"><a href="/">Далекоміри</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Витратні матеріали для інструменту</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/">Свердла</a></li>
+                    <li class="general-menu__def-link"><a href="/">Біти</a></li>
+                    <li class="general-menu__def-link"><a href="/">Круги відрізні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Пили та полотна</a></li>
+                    <li class="general-menu__def-link"><a href="/">Скоби для степлерів</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/markirovka-upakovka/kantcelyarskie-nozhi/f1120-lezvie/">Леза для ножів</a></li>
+                    <li class="general-menu__def-link"><a href="/">Піна монтажна</a></li>
+                    <li class="general-menu__def-link"><a href="/">Клеї та герметики</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/grafitovie-karandashi/">Олівці</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/stationery/markeri-permanentnie/">Маркери</a></li>
+                    <li class="general-menu__def-link"><a href="/">Стрічка ізоляційна</a></li>
+                </ul>
+                <ul class="dd">
+                    <li><a class="general-menu__cat-name general-menu__def-link" onclick="return false" href="/">Засоби індивідуального захисту</a>
+                    </li>
+                    <li class="general-menu__def-link"><a href="/ua/instrument-spetsodezhda/perchatki/">Рукавички одноразові </a></li>
+                    <li class="general-menu__def-link"><a href="/">Комбінезони одноразові</a></li>
+                    <li class="general-menu__def-link"><a href="/">Окуляри захисні</a></li>
+                    <li class="general-menu__def-link"><a href="/ua/instrument-spetsodezhda/maski-i-respiratory/">Маски та респіратори</a></li>
+                    <li class="general-menu__def-link"><a href="/">Жилети сигнальні</a></li>
+                    <li class="general-menu__def-link"><a href="/">Навушникі протишумові</a></li>
+                </ul>
+
+            </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+</ul>
+<style>
+    .general-menu__def-link a {
+        font-size: 13px;
+    }
+    
+    .imgbrands a:hover {
+        color: #00aff2;
+        transition-duration: 0.3s;
+    }
+    
+    .imgbrands {
+        display: flex;
+        width: auto;
+        height: 16px;
+        position: absolute;
+        align-items: center;
+        -webkit-box-align: center;
+        right: 10px;
+        bottom: 20px;
+    }
+    
+    ul {
+        padding-left: 1%;
+    }
+    
+    li {
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    #primary_nav_wrap li ul:hover {
+        display: block;
+    }
+    
+    #primary_nav_wrap li:hover>ul {
+        display: block;
+    }
+    
+    .general-menu__brand-ico {
+        margin-right: 30px;
+    }
+</style>
